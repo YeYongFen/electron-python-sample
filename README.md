@@ -32,7 +32,7 @@ we can use 'child_process.exec' to  spawn Python script
 ```javascript
 let script = path.join(__dirname, "./dist/kk.exe")
 var pyProc = require('child_process').spawn('python', [script, port])
-pyProc.stdout.on('data', function (data) {  //listen the data form console
+pyProc.stdout.on('data', function (data) {  //listen the data form cmd
     console.log('output from cmd：' + data);
 });
 
@@ -43,7 +43,7 @@ we can use 'child_process.execFile' to  run the generated excutable
 ```javascript
 let script = path.join(__dirname, "./dist/kk.exe")
 var pyProc = require('child_process').execFile(script)
-pyProc.stdout.on('data', function (data) {  //listen the data form console
+pyProc.stdout.on('data', function (data) {  //listen the data form cmd
     console.log('output from cmd：' + data);
 });
 
